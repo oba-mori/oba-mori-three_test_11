@@ -52,8 +52,8 @@
 
       function init() {
         // サイズを指定
-        const width = 480;
-        const height = 270;
+        const width = 960;
+        const height = 540;
 
         // レンダラーを作成
         const canvasElement = document.querySelector('#myCanvas');
@@ -100,6 +100,11 @@
 
             console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
 
+            if(( xhr.loaded / xhr.total * 100 ) >= 100)
+            {
+              console.log("ロード完了！");
+              console.log("「パーフェクトだウォルター」");
+            }
         });
 
 
